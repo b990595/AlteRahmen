@@ -1,0 +1,18 @@
+# Anything but index.php in public
+public/**/*.php
+!public/index.php
+
+
+# Composer files
+vendor/
+
+# Data
+data/*
+temp/
+
+
+### PhpStorm ###
+.idea
+
+### NetBeans ###
+nbproject/private

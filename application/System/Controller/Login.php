@@ -14,15 +14,9 @@ class Login extends \FR_WebController{
         $pass = \HttpRequest::PostOrDie("pass");
         $r = \HttpRequest::PostOrDie("r");
 
-        $redirect = $r;
-        if (strstr($r, "?")){
-            $redirect.="&__userTicket=".base64_encode($user.":".sha1($pass));
-        }else{
-            $redirect.="?__userTicket=".base64_encode($user.":".sha1($pass));
-        }
+        new \FR_User(base64_encode($user.":".$pass));
 
-
-        return $this->renderRedirect($redirect);
+        return $this->renderRedirect($r);
     }
     
 }

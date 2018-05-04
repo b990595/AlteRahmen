@@ -33,7 +33,7 @@ class FR_User {
             $tmpSession = Session::GetOrFalse("userdata");
             if (isset($tmpSession['username']) && isset($tmpSession['password']) && isset($tmpSession['acl'])) {
                 $this->username = $tmpSession['username'];
-                $this->password = sha1($tmpSession['password']);
+                $this->password = $tmpSession['password'];
                 $this->validateUser();
                 if ($this->isValidUser()) {
                     $this->acl = isset($tmpSession['acl']) ? $tmpSession['acl'] : $this->lookupAcl();
@@ -98,11 +98,7 @@ class FR_User {
     }
 
     private function validateUser() {
-
-        $this->validUser = false;
-
         $this->validUser = true;
-
     }
 
     public function isValidUser() {
