@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="min-height: 100%;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jutlander</title>
+
+        <?php
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/jquery-2.2.3.min.js\" ></script>";
+        ?>
+
+        <!-- FLOT - GRAPHS -->
+        <script src="<?php echo FR_SCRIPTS_PATH; ?>/flot/jquery.flot.min.js"></script>
+
+
+        <!-- BOOTSTRAP -->
+        <!--
+        <link rel="stylesheet" href="<?php echo FR_PUBLIC_PATH; ?>/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo FR_PUBLIC_PATH; ?>/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        -->
+        <link href="https://portal.jbank.dk/css/bootstrap.min.css" media="screen,print" rel="stylesheet" type="text/css">
+        <script src="<?php echo FR_PUBLIC_PATH; ?>/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="<?php echo FR_PUBLIC_PATH; ?>/font-awesome-4.6.3/css/font-awesome.min.css" media="screen,print" rel="stylesheet" type="text/css">
+        <link href="<?php echo FR_PUBLIC_PATH; ?>/css/faa.min.css" media="screen,print" rel="stylesheet" type="text/css">
+        <link href="<?php echo FR_CSS_PATH; ?>/process-steps.css" rel="stylesheet" type="text/css" />
+
+        <link href="<?php echo FR_SCRIPTS_PATH; ?>/jquery-ui-1.10.3.custom/css/cupertino/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- PRETTY ALERTS -->
+        <script src="<?php echo FR_PUBLIC_PATH; ?>/sweetalert-master/dist/sweetalert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="<?php echo FR_PUBLIC_PATH; ?>/sweetalert-master/dist/sweetalert.css">
+
+        <!-- DROPZONE -->
+        <script src="<?php echo FR_PUBLIC_PATH; ?>/dropzone-4.3.0/dist/min/dropzone.min.js"></script> 
+       <link rel="stylesheet" type="text/css" href="<?php echo FR_PUBLIC_PATH; ?>/dropzone-4.3.0/dist/min/dropzone.min.css">
+ 
+        
+        <style>
+            body{
+                background-color: #FFFFFF;
+                font-size: 12px;
+            }
+            ::-ms-clear {
+                display: none;
+            }
+            ::-ms-reveal {
+                display: none;
+            }
+        </style>
+
+
+
+        <!-- DAWA EJENDOMSOPSLAG -->
+        <script src="<?php echo FR_SCRIPTS_PATH; ?>/dawa/dawa-autocomplete2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo FR_CSS_PATH; ?>/dawa/dawa-autocomplete2.css">
+
+
+        <?php
+
+        // *************************************************************
+// JQuery + plugins
+// *************************************************************
+        // KUN DATEPICKER
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js\" ></script>";
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/jquery.blockUI.js\" ></script>";
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/jquery.autoGrow.js\" ></script>";
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/jquery.autoNumeric.js\" ></script>";
+        echo "<script type=\"text/javascript\" src=\"" . FR_SCRIPTS_PATH . "/phpjs/nyversion.min.js\" ></script>";
+        echo "<script type='text/javascript'>";
+        // ScrollTop (hvis værdi er sat i localStorage) - Benyttes af RSheet
+        echo "$(document).ready(function(){";
+        echo "try{";
+        echo "$(document).scrollTop(window.localStorage.scrollTop);";
+        echo "window.localStorage.scrollTop = 0;";
+        echo "}catch(e){}";
+        echo "});";
+        // Blinking (nice lille feature)
+        echo "function __blinking(){";
+        echo "$(\"[blinkingColor*='#']\").each(function(){
+            if ($(this).attr(\"blinkingHighlight\") == \"on\"){		
+            $(this).css(\"background-color\", \"\");
+            $(this).attr(\"blinkingHighlight\", \"\");
+        }else{
+            $(this).css(\"background-color\", $(this).attr(\"blinkingColor\"));
+            $(this).attr(\"blinkingHighlight\", \"on\");}});";
+        echo "setTimeout(\"__blinking()\", 500);";
+        echo "}";
+        echo "\$(document).ready(function(){__blinking();});";
+        echo "</script>";
+// *************************************************************
+        ?>
+    </head>
+    <body>

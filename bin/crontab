@@ -1,0 +1,7 @@
+MAILTO=krj@jutlander.dk
+
+# OBS!!!!! DENNE FIL SKAL SLUTTE MED EN TOM LINIE.
+# . ~/.cronenv;  gør at APPLICATION_ENV sættes ..
+
+# Nightly Load Banklaan - Allégro
+45	19	*	*	*	/bin/sh /var/www/home/legacy/app/bin/cron/allegro_nightly.sh

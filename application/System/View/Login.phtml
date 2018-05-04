@@ -1,0 +1,12 @@
+<?php
+echo "<center>";
+echo "<div class='alert alert-danger' role='alert'>Du er ikke logget ind.</div>";
+echo "<form method='POST' action='".FR_Helpers::getUrlByController(null, "system", "login", "doLogin")."'>";
+echo "Brugernavn:<br><input type='text' name='user' value='' />";
+echo "<br><br>";
+echo "Adgangskode:<br><input type='password' name='pass' />";
+echo "<input type='hidden' name='r' value='".$r."' />";
+echo "<br><br>";
+echo "<input type='submit' value='Log ind' />";
+echo "</form>";
+echo "</center>";

@@ -1,0 +1,45 @@
+<?php
+
+use $useClassName;
+
+class $className extends $baseClassName
+{
+
+    // **********************************************************
+    // Migration Code - START
+    // **********************************************************
+
+
+    private function tableChanges(){
+
+    }
+
+    private function viewChanges(){
+
+    }
+
+
+    // **********************************************************
+    // Migration Code - END
+    // **********************************************************
+
+
+
+
+    // **********************************************************
+    // System Code - DON'T EDIT !!!
+    // **********************************************************
+    public function up()
+    {
+        // Først ændringer til tabeller
+        $this->tableChanges();
+
+        // Dernæst ændringer til views
+        $this->viewChanges();
+
+    }
+
+    public function down(){
+        throw new Exception("JB does NOT use rollback !!!");
+    }
+}
