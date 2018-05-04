@@ -7,12 +7,12 @@ public/**/*.php
 vendor/
 
 # Data
-data/*
+data/
 temp/
 
 
 ### PhpStorm ###
-.idea
+.idea/
 
 ### NetBeans ###
-nbproject/private
+nbproject/
